@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+gesture_log.txt
+gesture_log.json
+
+# 개인 설정
+config_local.py
+
+# 테스트 비디오/이미지
+test_videos/
+test_images/
+*.mp4
+*.avi
+*.jpg
+*.png
+!docs/*.png
