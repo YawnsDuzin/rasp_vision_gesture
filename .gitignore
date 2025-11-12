@@ -26,6 +26,10 @@ Thumbs.db
 *.log
 gesture_log.txt
 gesture_log.json
+security_log.json
+
+# 보안
+gesture_password.json
 
 # 개인 설정
 config_local.py

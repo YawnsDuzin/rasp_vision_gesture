@@ -106,3 +106,28 @@ DEFAULT_VOLUME = 70  # 기본 볼륨 (0-100)
 # 제스처 액션 쿨다운 (초)
 # 같은 제스처를 연속으로 인식하지 않도록 하는 최소 시간 간격
 ACTION_COOLDOWN = 1.0
+
+# ===== 제스처 보안 시스템 설정 =====
+
+# 제스처 비밀번호 설정
+SECURITY_SETTINGS = {
+    'password_length': 4,        # 비밀번호 길이 (제스처 개수)
+    'max_attempts': 3,           # 최대 시도 횟수
+    'timeout_seconds': 10,       # 제스처 입력 제한 시간 (초)
+    'lockout_duration': 30,      # 잠금 지속 시간 (초)
+}
+
+# 추천 비밀번호 패턴 (예시)
+EXAMPLE_PASSWORDS = [
+    # 간단한 패턴
+    ["V_SIGN", "FIST", "THUMBS_UP", "OK_SIGN"],
+    ["THUMBS_UP", "THUMBS_UP", "V_SIGN", "V_SIGN"],
+
+    # 숫자 패턴 (손가락 개수)
+    ["ONE_FINGER", "TWO_FINGERS", "THREE_FINGERS", "FOUR_FINGERS"],
+    ["FIVE_FINGERS", "FOUR_FINGERS", "THREE_FINGERS", "TWO_FINGERS"],
+
+    # 복잡한 패턴
+    ["OK_SIGN", "POINTING", "FIST", "OPEN_PALM"],
+    ["V_SIGN", "OK_SIGN", "THUMBS_UP", "POINTING"],
+]

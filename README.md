@@ -12,11 +12,18 @@
 - ⚡ 라즈베리파이 최적화 (성능/정확도 밸런스)
 - 📊 실시간 FPS 및 신뢰도 표시
 
-### 🏠 스마트 홈 허브 ⭐ NEW!
+### 🏠 스마트 홈 허브
 - 💡 **스마트 홈 제어**: GPIO를 통한 조명, 선풍기, 에어컨 등 제어
 - 🎵 **음악 플레이어**: 제스처로 음악 재생/정지, 곡 변경, 볼륨 조절
 - 🔄 **양손 제어**: 왼손은 스마트 홈, 오른손은 음악 플레이어
 - 🎮 **통합 제어**: 하나의 인터페이스로 모든 기능 제어
+
+### 🔐 제스처 보안 시스템 ⭐ NEW!
+- 🔑 **제스처 비밀번호**: 특정 순서의 제스처 조합으로 인증
+- 🛡️ **무차별 대입 방지**: 최대 시도 횟수 제한
+- ⏱️ **타임아웃**: 제스처 입력 시간 제한
+- 📊 **로그 기록**: 모든 인증 시도 기록
+- 🔒 **자동 잠금**: 실패 시 일시 잠금
 
 ## 시스템 요구사항
 
@@ -77,7 +84,7 @@ CURRENT_DEVICE = 'raspberry_pi_4'  # 또는 'raspberry_pi_3', 'raspberry_pi_zero
 
 ## 사용 방법
 
-### 🏠 스마트 홈 허브 실행 (권장)
+### 🏠 스마트 홈 허브 실행
 
 완전한 스마트 홈 제어 시스템:
 
@@ -91,6 +98,26 @@ python3 smart_hub.py --sim
 ```
 
 **상세 가이드**: [SMART_HUB_GUIDE.md](SMART_HUB_GUIDE.md) 참고
+
+### 🔐 제스처 보안 시스템 실행 ⭐ NEW!
+
+제스처 비밀번호 인증 데모:
+
+```bash
+python3 security_demo.py
+```
+
+시뮬레이션 모드:
+```bash
+python3 security_demo.py --sim
+```
+
+예제 모음 실행:
+```bash
+python3 security_examples.py
+```
+
+**상세 가이드**: [SECURITY_GUIDE.md](SECURITY_GUIDE.md) 참고
 
 ### 간단한 예제 실행
 
@@ -179,15 +206,20 @@ rasp_vision_gesture/
 ├── smart_home_controller.py         # 스마트 홈 GPIO 제어
 ├── music_player_controller.py       # 음악 플레이어 제어
 ├── gesture_actions.py               # 제스처 액션 매핑
-├── config.py                        # 설정 파일
+│
+├── security_demo.py                 # 🔐 제스처 보안 시스템 데모
+├── gesture_security.py              # 제스처 보안 모듈
+├── security_examples.py             # 보안 시스템 예제 모음
 │
 ├── simple_example.py                # 간단한 예제
 ├── advanced_gesture_recognizer.py   # 고급 제스처 인식
+├── config.py                        # 설정 파일
 │
 ├── requirements.txt                 # Python 패키지 의존성
 ├── README.md                        # 프로젝트 설명
 ├── IMPLEMENTATION_GUIDE.md          # 상세 개발 가이드
 ├── SMART_HUB_GUIDE.md              # 스마트 홈 허브 가이드
+├── SECURITY_GUIDE.md               # 제스처 보안 가이드
 └── .gitignore
 ```
 
@@ -199,12 +231,19 @@ rasp_vision_gesture/
   - 단계별 개발 절차
   - 최적화 전략
 
-- **[SMART_HUB_GUIDE.md](SMART_HUB_GUIDE.md)**: 스마트 홈 허브 완벽 가이드 ⭐
+- **[SMART_HUB_GUIDE.md](SMART_HUB_GUIDE.md)**: 스마트 홈 허브 완벽 가이드
   - 제스처 컨트롤 가이드
   - 하드웨어 연결 방법
   - GPIO 핀 배치
   - 커스터마이징 방법
   - 트러블슈팅
+
+- **[SECURITY_GUIDE.md](SECURITY_GUIDE.md)**: 제스처 보안 시스템 가이드 ⭐ NEW!
+  - 제스처 비밀번호 설정
+  - 보안 메커니즘 설명
+  - 비밀번호 패턴 추천
+  - 실제 사용 예제
+  - API 레퍼런스
 
 ## 라이센스
 
